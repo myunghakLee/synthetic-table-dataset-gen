@@ -17,6 +17,9 @@ Gemini API를 활용하여 다양한 도메인/스타일의 테이블을 생성�
 
 ```
 Gemini/
+├── GeneratedHTMLs/        # [중간 산출물] 생성된 원본 HTML
+├── Output_Images/         # [최종 산출물] 학습용 이미지 (Input)
+├── Output_Labels/         # [최종 산출물] 정제된 HTML (Label)
 ├── run.sh                 # 전체 파이프라인 실행 스크립트
 ├── main_batch.py          # Step 1: Gemini API로 HTML 테이블 생성
 ├── make_prompt.py         # 프롬프트 생성기 (main_batch.py에서 호출)
@@ -24,10 +27,9 @@ Gemini/
 ├── extract_table.py       # Step 3: HTML 정제 (스타일 제거, 라벨 생성)
 ├── html2img_split.py      # (선택) 긴 테이블 자동 분할
 ├── gemini_api_key.txt     # Gemini API 키
-│
 ├── GeneratedHTMLs/        # [중간 산출물] 생성된 원본 HTML
-├── Output_Images/         # [최종 산출물] 학습용 이미지 (Input)
-└── Output_Labels/         # [최종 산출물] 정제된 HTML (Label)
+└── Output_Images/         # [최종 산출물] 학습용 이미지 (Input)
+
 ```
 
 ## 🚀 빠른 시작
@@ -335,7 +337,3 @@ beautifulsoup4>=4.12.0
 pip install playwright
 playwright install chromium
 ```
-
-## 📝 라이선스
-
-이 프로젝트는 Table Parsing 모델 학습용 Synthetic Data 생성을 위해 제작되었습니다.
