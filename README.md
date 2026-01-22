@@ -16,7 +16,7 @@ Gemini API를 활용하여 다양한 도메인/스타일의 테이블을 생성�
 ## 📁 프로젝트 구조
 
 ```
-Gemini/
+synthetic-table-dataset-gen/
 ├── GeneratedHTMLs/        # [중간 산출물] 생성된 원본 HTML
 ├── Output_Images/         # [최종 산출물] 학습용 이미지 (Input)
 ├── Output_Labels/         # [최종 산출물] 정제된 HTML (Label)
@@ -26,9 +26,8 @@ Gemini/
 ├── html2img.py            # Step 2: HTML → 이미지 변환 (Augmentation)
 ├── extract_table.py       # Step 3: HTML 정제 (스타일 제거, 라벨 생성)
 ├── html2img_split.py      # (선택) 긴 테이블 자동 분할
-├── gemini_api_key.txt     # Gemini API 키
-├── GeneratedHTMLs/        # [중간 산출물] 생성된 원본 HTML
-└── Output_Images/         # [최종 산출물] 학습용 이미지 (Input)
+└── gemini_api_key.txt     # Gemini API 키
+
 
 ```
 
